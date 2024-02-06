@@ -22,11 +22,12 @@ function ListingItems({ listing, id, onDelete}) {
 
             <p className="categoryListingPrice">
                 £{listing.offer 
-                    ? listing.regularPrice
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ',') 
-                    : ''    
-                }
+                    ? listing.discountPrice 
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    : listing.regularPrice
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                 {listing.type === 'rent' && ' / Month'}
             </p>
             <div className="categoryListingInfoDiv">
