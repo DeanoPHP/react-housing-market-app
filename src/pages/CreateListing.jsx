@@ -25,6 +25,7 @@ function CreateListing() {
     parking: false,
     furnished: false,
     address: '',
+    city: '',
     offer: false,
     regularPrice: 0,
     discountedPrice: 0,
@@ -41,6 +42,7 @@ function CreateListing() {
     parking,
     furnished,
     address,
+    city,
     offer,
     regularPrice,
     discountedPrice,
@@ -174,6 +176,7 @@ function CreateListing() {
     }
 
     formDataCopy.location = address
+    formDataCopy.city = city.toLowerCase()
     delete formDataCopy.images
     delete formDataCopy.address
     !formDataCopy.offer && delete formDataCopy.discountedPrice
@@ -334,6 +337,16 @@ function CreateListing() {
             type="text"
             id="address"
             value={address}
+            onChange={onMutate}
+            required
+          />
+
+          <label className="formLabel">Please Add City for Search</label>
+          <input
+            className="formInputAddress"
+            type="text"
+            id="city"
+            value={city}
             onChange={onMutate}
             required
           />
