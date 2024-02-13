@@ -176,7 +176,7 @@ function CreateListing() {
     }
 
     formDataCopy.location = address
-    formDataCopy.city = city.toLowerCase()
+    formDataCopy.city = city.toLowerCase().trim()
     delete formDataCopy.images
     delete formDataCopy.address
     !formDataCopy.offer && delete formDataCopy.discountedPrice
