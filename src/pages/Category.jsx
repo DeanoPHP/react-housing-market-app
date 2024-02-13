@@ -172,7 +172,7 @@ function Category() {
             className="formInputName"
             onChange={onChange}
             id="city"
-            value={city}
+            value={city.trim()}
           />
           <button type="submit" className="formButtonActive">
             Submit
