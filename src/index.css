@@ -721,6 +721,10 @@ button {
   display: block;
 }
 
+.buttons {
+  display: flex;
+}
+
 .formButtons {
   display: flex;
 }
@@ -745,6 +749,17 @@ button {
 .formButtonActive {
   background-color: #00cc66;
   color: #ffffff;
+}
+
+.formButtonReset {
+  padding: 0.9rem 3rem;
+  background-color: #e8a2a2;
+  font-weight: 500;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem 0 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {

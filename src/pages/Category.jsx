@@ -115,6 +115,12 @@ function Category() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Check whether city is empty 
+      if (city === '') {
+        setListings((prev) => [...prev])
+        return
+      }
+
       // Get reference
       const listingRef = collection(db, 'listings');
 
@@ -174,9 +180,14 @@ function Category() {
             id="city"
             value={city.trim()}
           />
-          <button type="submit" className="formButtonActive">
-            Submit
-          </button>
+          <div className="buttons">
+            <button type="submit" className="formButtonActive">
+              Submit
+            </button>
+            <button type="submit" className="formButtonReset" onClick={() => window.location.reload()}>
+              Refresh
+            </button>
+          </div>
         </form>
       </header>
       {loading ? (
