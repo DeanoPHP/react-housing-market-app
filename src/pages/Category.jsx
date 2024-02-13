@@ -108,7 +108,7 @@ function Category() {
   const onChange = (e) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.id]: e.target.value.toLowerCase(),
+      [e.target.id]: e.target.value.toLowerCase().trim(),
     }));
   };
 
